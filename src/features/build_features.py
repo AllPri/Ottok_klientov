@@ -3,13 +3,11 @@ from sklearn.preprocessing import OneHotEncoder
 from sklearn.model_selection import train_test_split
 
 def build_features(categorical_columns, target, encoder):
-    
     """
     Функция принимает категориальные переменные, целевой признак и энкодер.
     По завершению работы в data/processed/ создаются тестовые и тренировочные данные.
     Промежуточные данные сохраняются в data/interim/ 
     """
-
     encoder = OneHotEncoder(sparse_output = False, drop = 'first')
 
     # преобразуем категориальные данные в формат 0/1

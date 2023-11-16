@@ -4,10 +4,12 @@ import joblib
 import time
 
 def make_predict():
+    """
+    Запуск прогноза на новых данных    
+    """
     encoder = OneHotEncoder(sparse_output = False, drop = 'first')
     categorical_columns = ['Пол', 'Образование', 'Семейный статус', 'Уровень дохода', 'Категория карты']
     encoder.fit_transform(pd.read_csv('data/raw/data_raw.csv')[categorical_columns])
-
 
     def prepare_new_data(new_data, categorical_columns, encoder):
         # преобразуем категориальные признаки в формат one-hot-encoding

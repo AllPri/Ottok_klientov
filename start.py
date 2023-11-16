@@ -5,6 +5,8 @@ from src.features.build_features import build_features
 from src.features.fit_models import fit_models
 from src.predict.prediction import make_predict
 
+# дает доступ ко всем функциям кода
+
 i = input('Введите команду (help для справки): ')
 if i == 'help':
     print('генератор данных - генерация датасета, по умолчанию используется - https://docs.google.com/spreadsheets/d/18oQZQ9asaFbT5TTO8qXF4ZIA_qB4SiIMCHJ2UcnSVWo/edit#gid=0\n',

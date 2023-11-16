@@ -1,6 +1,9 @@
 from src.features.model_training import *
 
 def fit_models():
+    """
+    Запуск обучения моделей
+    """
     model = input('Ведите название модели ("help" вызов справки): ')
     if model == 'help':
         print('Поддерживаемые модели:\n',

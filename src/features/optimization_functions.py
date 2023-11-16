@@ -19,14 +19,12 @@ MODEL_INCOME = (8500 * 500 + 1627 * (500 - 100) / 2) - BASIC_INCOME
 # Функции для оптимизации моделей и вывода результатов обучения
 
 def income_function(y_test, y_pred, REVENUE = 500, BONUS = 100, PROBABILITTY = 0.5):
-
     """
     Функция оптимизация модели.
     Принимает тестовые и спрогнозированные данные,
     а также прибыль с одного клиента, размер бонуса и вероятность ухода.
     Возвращает долю от теоретически возможной прибыли
     """
-
     # извлекаем значения из матрицы ошибок
     TN, FP = confusion_matrix(y_test, y_pred)[0]
     FN, TP = confusion_matrix(y_test, y_pred)[1]
@@ -43,14 +41,12 @@ def income_function(y_test, y_pred, REVENUE = 500, BONUS = 100, PROBABILITTY = 0
     return result
 
 def gridsearch(function, param, cv_ = 5, metrik = income_function):
-
     """
     Функция поиска по сетке параметров, 
     вместе с -income_function()- оптимизируют параметры моделей.
     Принимает функцию и список параметров для оптимизации.
     На выход подается модель с оптимальными параметрами.
     """
-    
     # считываем данные
     X_train = pd.read_csv('data/processed/X_train.csv')
     y_train = pd.read_csv('data/processed/y_train.csv')
@@ -71,7 +67,6 @@ def gridsearch(function, param, cv_ = 5, metrik = income_function):
     return grid_search.best_estimator_
 
 def conclusion(optim_model, start, end):
-
     """
     Функция вывода заключения по результатам обучения.
     На вход получает модель с оптимальными параметрами.
@@ -88,7 +83,6 @@ def conclusion(optim_model, start, end):
     - точность прогноза, что клиент уйдет,
     - матрица ошибок.
     """
-    
     # считываем данные
     X_train = pd.read_csv('data/processed/X_train.csv')
     y_train = pd.read_csv('data/processed/y_train.csv')

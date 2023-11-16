@@ -19,6 +19,8 @@ from sklearn.linear_model import LogisticRegressionCV
 from src.features.optimization_functions import gridsearch
 from src.features.optimization_functions import conclusion
 
+# обучение моделей
+
 def fit_GaussianNB_model():
     # старт таймера
     start = time.time()
