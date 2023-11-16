@@ -46,10 +46,10 @@ def make_predict():
         credit_limit = float(input('Кредитный лимит ($): '))
         total_revolving_balance = float(input('Общий возобновляемый остаток средств ($): '))
         credit_line = float(input('Открытая кредитная линия ($): '))
-        changing_transaction_amount = float(input('Индекс изменения суммы транзация с 4го квартака до первого (от 0 до 1): '))
+        changing_transaction_amount = float(input('Индекс изменения суммы транзация с 4го квартала до первого (от 0 до 1): '))
         transaction_amount = float(input('Общая сумма транзакции за год ($): '))
         number_transactions = float(input('Общее количество транзакций за год: '))
-        changing_number_transactions = float(input('Индекс изменения количества транзаций с 4го квартака до первого (от 0 до 1): '))
+        changing_number_transactions = float(input('Индекс изменения количества транзаций с 4го квартала до первого (от 0 до 1): '))
         average_card_usage_rate = float(input('Средний коэффициент использования карты: '))
     
     elif f == 'пример':
