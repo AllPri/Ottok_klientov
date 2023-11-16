@@ -1,0 +1,10 @@
+catboost_info/
+data/
+models/
+venv/
+data.dvc
+models.dvc
+src/__pycache__/
+src/data_processing/__pycache__/
+src/features/__pycache__/
+src/predict/__pycache__/
